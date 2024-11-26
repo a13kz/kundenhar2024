@@ -1,0 +1,68 @@
+body{
+    background-color:  #3498db;
+}
+
+div#layout{
+    display: grid;
+    height: 100vh;
+    gap: 1vh;
+    grid-template-columns:12.5% 87.5%;
+    grid-template-rows: 30vh 20vh 100vh;
+    grid-template-areas: 
+    'hd hd'
+    'as nv'
+    'as sc'
+    'as sc';
+}
+
+
+header{
+    text-align: center;
+    font-size: 400%;
+    
+    grid-area: hd;
+    background-color: #DB7734;
+    border-radius: 5px;
+}
+
+nav{
+    grid-area: nv;
+    background-color: #DB7734;
+    border-radius: 5px;
+    color: white;
+}
+
+aside{
+    grid-area: as;
+    background-color: #DB7734;
+    border-radius: 5px;
+    color: white;
+}
+
+section{
+    grid-area: sc;
+    background-color: #DB7734;
+    border-radius: 5px;
+}
+
+section#wrapper{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.scroll_item{
+    white-space: nowrap;
+    animation-name: scroll_animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}    
+@keyframes scroll_animation {
+        from {transform: translateX(0) }
+        to {transform: translateX(calc(0px - 50%));}
+      }
+article img{
+    width: 200%;
+    height: 100%;
+}
