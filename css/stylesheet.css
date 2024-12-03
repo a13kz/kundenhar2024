@@ -1,5 +1,8 @@
+
+
 body{
-    background-color:  #3498db;
+    background-color:  #3498DB;
+    margin: 0%;
 }
 
 div#layout{
@@ -15,54 +18,77 @@ div#layout{
     'as sc';
 }
 
+.Lexend{
+    font-family: "Lexend", serif;
+    font-size: 5vh;
+    text-align: center;
+    
+}
+
+.margin{
+    margin-bottom: 100vh;
+    margin-top: 50vh;
+}
 
 header{
-    text-align: center;
+    
     font-size: 400%;
     
     grid-area: hd;
-    background-color: #DB7734;
-    border-radius: 5px;
+    
+    border-radius: 0  0 0px 30px;
+    color: white;
+    font-family: "Lexend", serif;
 }
 
 nav{
     grid-area: nv;
-    background-color: #DB7734;
-    border-radius: 5px;
+    background-color: #72b7e5;
+    border-radius: 30px;
     color: white;
 }
 
 aside{
     grid-area: as;
-    background-color: #DB7734;
-    border-radius: 5px;
+    background-color: #217DBB;
+    border-radius: 30px;
     color: white;
 }
 
 section{
     grid-area: sc;
-    background-color: #DB7734;
-    border-radius: 5px;
+    background-color: #217DBB;
+    border-radius: 30px;
 }
 
 section#wrapper{
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 100vh;
+    
 }
 
-.scroll_item{
-    white-space: nowrap;
-    animation-name: scroll_animation;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}    
-@keyframes scroll_animation {
-        from {transform: translateX(0) }
-        to {transform: translateX(calc(0px - 50%));}
-      }
+article {
+    width: 45%;
+    object-fit: cover;
+    
+}
 article img{
-    width: 200%;
-    height: 100%;
+    transition: 1s;
+    width: 100%;
+    border-radius: 10%;
+}
+
+article a img:hover{
+    border-radius: 20%;
+}
+
+section#mainWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
