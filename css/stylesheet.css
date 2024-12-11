@@ -1,36 +1,56 @@
 
 
 body{
-    background-color:  white;
+    background-image: image("ring.jpeg");
     margin: 0%;
 }
+
+
 h1{
     font-size: 50px;
-    
-}
+    text-align: left;
+    color: #3498db;
+}   
 h3{
     font-size: 20px;
     text-align:end;
+    margin-right: 1vh;
+    color: #f2f0ef;
+    font-family: "Lexend Exa", sans-serif;
 }
 
 h2{
-    color: white;
+    color: #f2f0ef;
+    
+}
+div#layout-index{
+    display: grid;
+    height: 300vh;
+    
+    grid-template-columns:12.5% 1fr;
+    grid-template-rows: 7% 5% 50vh 100vh;
+    grid-template-areas: 
+    'hd hd'
+    'nv nv'
+    'ar ar'
+    'sc sc'
+    'sc sc';
 }
 div#layout{
     display: grid;
-    height: 100vh;
-    gap: 1vh;
-    grid-template-columns:12.5% 87.5%;
-    grid-template-rows: 30vh 20vh 100vh;
+    height: 135vh;
+    
+    grid-template-columns:12.5% 1fr;
+    grid-template-rows: 17.5% 10% 100vh;
     grid-template-areas: 
     'hd hd'
-    'as nv'
-    'as sc'
-    'as sc';
+    'nv nv'
+    'sc sc'
+    'sc sc';
 }
 
 .Lexend{
-    font-family: "Lexend", serif;
+    font-family: "Lexend Exa", sans-serif;
     font-size: 5vh;
     text-align: center;
 }
@@ -38,39 +58,44 @@ div#layout{
 
 
 header{
-    background-color: white;
+    background-color: 	#f2f0ef;
     font-size: 400%;
     grid-area: hd;
-    color: #16415D;
-    font-family: "Lexend", serif;
+
+    font-family: "Lexend Exa", sans-serif;
 }
 
 nav{
     grid-area: nv;
-    background-color: #3498db;
-    border-radius: 30px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
+    background-color:#3498db;
+    /*border-radius: 30px;*/
 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    
+}
+/*
 aside{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     grid-area: as;
-    background-color: #217DBB;
+    background-color: #3498db;
     border-radius: 30px;
     color: white;
 }
-
+*/
 section{
     grid-area: sc;
-    background-color: #217DBB;
-    border-radius: 30px;
+    
+    /*border-radius: 30px;*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
+
 
 section#wrapper{
     display: flex;
     flex-direction: row;
+    background-color: rgb(182, 217, 255);
     justify-content: space-evenly;
     flex-wrap: wrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -81,6 +106,16 @@ section#wrapper{
     margin-bottom: 100vh;
 }
 
+div#img{
+    width: 100%;
+    grid-area: sc;
+    object-fit: fill;
+}
+div img{
+    width: 800%;
+
+}
+
 article {
     width: 45%;
     object-fit: cover;
@@ -88,33 +123,50 @@ article {
     
 }
 article img{
-    transition: 1s;
+    transition: 0.2s;
     width: 100%;
-    border-radius: 10%;
+    border-radius: 5%;
+    scale: 100%;
 }
 
 article a img:hover{
-    border-radius: 20%;
+    scale: 102%;
 }
 
 section#mainWrapper{
     display: flex;
+    background-color: #01101b;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-image: image("ring.jpg");
 }
+
+
+a:link, a:visited {
+  
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+
 
 
 .hidden {
     opacity: 0;
     
     transform: translateY(0);
+    filter: blur(5px);
     transition: all 1s;
 
 }
 
 .show {
+    filter: blur(0);
     opacity: 1;
     transform: translateY(-100%);
 }
