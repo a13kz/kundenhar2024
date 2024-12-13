@@ -3,6 +3,9 @@
 body{
     background-image: image("ring.jpeg");
     margin: 0%;
+    gap: 0%;
+    padding: 0%;
+    overflow: auto;
 }
 
 
@@ -11,14 +14,11 @@ h1{
     left: 2vh;
     top: 1.5vh;
     font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
 }   
 h3{
-    position: absolute;
-    top: 5%;
-    right: -2.5vh;
     font-size: 15px;
-    
-    
     color: white;
     font-family: "Lexend Exa", sans-serif;
 }
@@ -29,40 +29,35 @@ h2{
 }
 
 h4{
-    font-family: "Lexend Exa", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 header object{
-    position: absolute;
-    top: 2vh;
-    left: 1vh;
-    width: 4vh;
+    width: 0.5em;
 }
 
 div#layout-index{
     display: grid;
     height: 300vh;
     
-    grid-template-columns:12.5% 1fr;
-    grid-template-rows: 3% 2.5% 28% 100vh;
+    
+    grid-template-rows: 4em 3em 30em 1fr;
     grid-template-areas: 
-    'hd hd'
-    'nv nv'
-    'ar ar'
-    'sc sc'
-    'sc sc';
+    'hd'
+    'nv'
+    'ar'
+    'sc'
+    'sc';
 }
 div#layout{
-    display: grid;
-    height: 300vh;
+    display: grid;    
     
-    grid-template-columns:12.5% 1fr;
-    grid-template-rows: 3% 2.5% 100vh;
+    grid-template-rows: 4em 3em 100em;
     grid-template-areas: 
-    'hd hd'
-    'nv nv'
-    'sc sc'
-    'sc sc';
+    'hd'
+    'nv'
+    'sc'
+    'sc';
 }
 
 .Lexend{
@@ -77,8 +72,8 @@ header{
     background-color: 	white;
     font-size: 400%;
     grid-area: hd;
-
-    font-family: "Lexend Exa", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+   
 }
 
 nav{
@@ -116,6 +111,8 @@ section#wrapper{
     background-color: white;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    gap: 0%;
+    padding: 0%;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);*/
 
 }
@@ -130,14 +127,14 @@ div#img{
     object-fit: fill;
 }
 div img{
-    width: 800%;
+    width: 100%;
     
 }
 
 article {
-    width: 45%;
+    width: 40em;
     object-fit: cover;
-    margin-top: 3.5vh;
+    margin-top: 2em;
     
 }
 article img{
@@ -155,8 +152,7 @@ section#mainWrapper{
     display: flex;
     background-color: #01101b;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     flex-wrap: wrap;
     background-image: image("ring.jpg");
 }
