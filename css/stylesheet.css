@@ -31,21 +31,21 @@ header object{
 
 div#layout-index{
     display: grid;
-    height: 300vh;
+    height: 100em;
     
-    
+    grid-template-columns: 100;
     grid-template-rows: 5em 3em 30em 1fr;
     grid-template-areas: 
     'hd'
     'nv'
-    'ar'
-    'sc'
-    'sc';
+    'dv'
+    'wr'
+    'wr';
 }
 div#layout{
     display: grid;    
     
-    grid-template-rows: 5em 3em 100em;
+    grid-template-rows: 5em 3em;
     grid-template-areas: 
     'hd'
     'nv'
@@ -91,15 +91,13 @@ aside{
 */
 section{
     grid-area: sc;
-    
-    /*border-radius: 30px;*/
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);*/
 }
 
 
 
 section#wrapper{
     display: flex;
+    grid-area: wr;
     flex-direction: row;
     background-color: white;
     justify-content: space-evenly;
@@ -115,12 +113,13 @@ section#wrapper{
 }
 
 div#img{
-    width: 100%;
-    grid-area: sc;
-    object-fit: fill;
+    grid-area: dv;
+    object-fit: cover;
+    overflow: hidden;
 }
-div img{
-    width: 100%;
+div#img img{
+    height: auto;
+    max-width: 100%;
     
 }
 
@@ -172,9 +171,16 @@ a:link, a:visited {
 }
 
 
-
+.ring{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    
+}
 
 .hidden {
+
     opacity: 0;
     
     transform: translateY(0);
