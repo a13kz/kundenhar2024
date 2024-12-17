@@ -32,10 +32,10 @@ header object{
 
 div#layout-index{
     display: grid;
-    height: 200vh;
+    height: 100vh;
     
     grid-template-columns: 100;
-    grid-template-rows: 5em 3em 30em 1fr 10em;
+    grid-template-rows: 5em 3em 30em 100em 20em;
     grid-template-areas: 
     'hd'
     'nv'
@@ -88,6 +88,7 @@ header{
 }
 
 nav{
+    
     display: flex;
     grid-area: nv;
     background-color:white;
@@ -112,7 +113,7 @@ aside{
 
 section#wrapper{
     display: flex;
-    height: 100%;
+    height: auto;
     grid-area: wr;
     flex-direction: row;
     background-color: white;
@@ -126,6 +127,7 @@ section#wrapper{
 
 footer{
     grid-area: ft;
+    background-color: #3498db;
 }
 
 
@@ -152,10 +154,9 @@ article {
     
 }
 article img{
-    transition: 0.2s;
     width: 100%;
     border-radius: 1em;
-    scale: 100%;
+    
 }
 
 button:hover{
