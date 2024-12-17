@@ -1,9 +1,10 @@
 
 
 body{
-    background-image: image("ring.jpeg");
+    background-color: orange;
     margin: 0%;
     gap: 0%;
+    
 }
 
 
@@ -31,20 +32,37 @@ header object{
 
 div#layout-index{
     display: grid;
-    height: 100em;
+    height: 200vh;
     
     grid-template-columns: 100;
-    grid-template-rows: 5em 3em 30em 1fr;
+    grid-template-rows: 5em 3em 30em 1fr 10em;
     grid-template-areas: 
     'hd'
     'nv'
     'dv'
     'wr'
-    'wr';
+    'ft';
 }
-div#layout{
+
+div#layout-credit{
     display: grid;    
     
+    grid-template-rows: 5em 3em 40em 10em;
+    grid-template-areas: 
+    'hd'
+    'nv'
+    'sc'
+    'ft';
+}
+
+section#credit-wrapper{
+
+}
+
+
+div#layout{
+    display: grid;    
+    height: 200vh;
     grid-template-rows: 5em 3em;
     grid-template-areas: 
     'hd'
@@ -89,14 +107,12 @@ aside{
     color: white;
 }
 */
-section{
-    grid-area: sc;
-}
 
 
 
 section#wrapper{
     display: flex;
+    height: 100%;
     grid-area: wr;
     flex-direction: row;
     background-color: white;
@@ -107,6 +123,12 @@ section#wrapper{
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);*/
 
 }
+
+footer{
+    grid-area: ft;
+}
+
+
 .margin{
     margin-top: 50vh;
     margin-bottom: 100vh;
@@ -141,7 +163,7 @@ button:hover{
 }
 
 button{
-    background-color: #3498db; /* Green */
+    background-color: #3498db;
     border: none;
     border-radius: 1em;
     color: white;
@@ -156,7 +178,7 @@ section#mainWrapper{
     display: flex;
     background-color: #01101b;
     flex-direction: column;
-
+    grid-area: sc;
     flex-wrap: wrap;
     background-image: image("ring.jpg");
 }
