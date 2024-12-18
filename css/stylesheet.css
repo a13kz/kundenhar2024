@@ -1,24 +1,24 @@
 
 
 body{
-    background-color: orange;
     margin: 0%;
     gap: 0%;
     
 }
 
 
-h3{
-    font-size: 15px;
-    color: white;
-    font-family: "Lexend Exa", sans-serif;
-    text-align: right;
-}
 
 h2{
     color: white;
-    font-family: "Lexend Exa", sans-serif;
+    font-family: "Roboto", sans-serif;
     text-align: center;
+}
+h3{
+    font-size: 20px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: right;
+    margin-top: -1.5em;
 }
 
 h4{
@@ -32,9 +32,7 @@ header object{
 
 div#layout-index{
     display: grid;
-    height: 100vh;
-    
-    grid-template-columns: 100;
+    height: 100em;
     grid-template-rows: 5em 3em 30em 100em 20em;
     grid-template-areas: 
     'hd'
@@ -46,18 +44,16 @@ div#layout-index{
 
 div#layout-credit{
     display: grid;    
-    
-    grid-template-rows: 5em 3em 40em 10em;
+    height: 100em;
+    grid-template-rows: 5em 3em 80em 1fr;
     grid-template-areas: 
     'hd'
     'nv'
-    'sc'
+    'wr'
     'ft';
 }
 
-section#credit-wrapper{
 
-}
 
 
 div#layout{
@@ -67,12 +63,12 @@ div#layout{
     grid-template-areas: 
     'hd'
     'nv'
-    'sc'
-    'sc';
+    'scw'
+    'scw';
 }
 
-.Lexend{
-    font-family: "Lexend Exa", sans-serif;
+.Roboto{
+    font-family: "Roboto", sans-serif;
     font-size: 5vh;
     text-align: center;
 }
@@ -84,36 +80,23 @@ header{
     font-size: 400%;
     grid-area: hd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-   
 }
 
 nav{
-    
     display: flex;
     grid-area: nv;
     background-color:white;
     justify-content: space-evenly;
-    /*border-radius: 30px;*/
-
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);*/
-
-    
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
-/*
-aside{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    grid-area: as;
-    background-color: #3498db;
-    border-radius: 30px;
-    color: white;
-}
-*/
 
 
 
-section#wrapper{
+.wrapper{
     display: flex;
-    height: auto;
+    height: 100%;
     grid-area: wr;
     flex-direction: row;
     background-color: white;
@@ -121,13 +104,20 @@ section#wrapper{
     flex-wrap: wrap;
     gap: 0%;
     padding: 0%;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);*/
+}
+section#mainWrapper{
+    display: flex;
+    background-color: #01101b;
+    flex-direction: column;
+    grid-area: scw;
+    flex-wrap: wrap;
 
 }
-
 footer{
     grid-area: ft;
     background-color: #3498db;
+    bottom: 0;
+
 }
 
 
@@ -151,8 +141,14 @@ article {
     width: 40em;
     object-fit: cover;
     margin-top: 2em;
-    
 }
+
+.article{
+    background-color: #3498db;
+    border-radius: 1em;
+    margin-bottom: 1em;
+} 
+
 article img{
     width: 100%;
     border-radius: 1em;
@@ -175,14 +171,7 @@ button{
     font-size: 16px;
 }
 
-section#mainWrapper{
-    display: flex;
-    background-color: #01101b;
-    flex-direction: column;
-    grid-area: sc;
-    flex-wrap: wrap;
-    background-image: image("ring.jpg");
-}
+
 
 
 a:link, a:visited {
