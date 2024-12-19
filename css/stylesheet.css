@@ -1,4 +1,7 @@
 
+:root{
+    --main-color: #3498db
+}
 
 body{
     margin: 0%;
@@ -7,72 +10,53 @@ body{
 }
 
 
+a:link, a:visited {
+    color: var(--main-color);
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+  }
 
-h2{
+
+.hidden {
+
+    opacity: 0;
+    
+    transform: translateY(0);
+    filter: blur(5px);
+    transition: all 1s;
+
+}
+
+.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.main-text{
     color: white;
     font-family: "Roboto", sans-serif;
     text-align: center;
+    font-size: 5em;
 }
-h3{
-    font-size: 20px;
+
+.paragraph-text{
     color: white;
     font-family: "Roboto", sans-serif;
-    text-align: right;
-    margin-top: -1.5em;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    text-wrap: wrap;
+    margin: 2.5em;
+    margin-left: 10em;
+    margin-right: 10em;
+    
 }
 
 h4{
     font-family: "Roboto", sans-serif;
 }
-
-header object{
-    width: 3em;
-    padding: 0.1em;
-}
-
-div#layout-index{
-    display: grid;
-    height: 100em;
-    grid-template-rows: 5em 3em 30em 100em 20em;
-    grid-template-areas: 
-    'hd'
-    'nv'
-    'dv'
-    'wr'
-    'ft';
-}
-
-div#layout-credit{
-    display: grid;    
-    height: 100em;
-    grid-template-rows: 5em 3em 80em 1fr;
-    grid-template-areas: 
-    'hd'
-    'nv'
-    'wr'
-    'ft';
-}
-
-
-
-
-div#layout{
-    display: grid;    
-    height: 200vh;
-    grid-template-rows: 5em 3em;
-    grid-template-areas: 
-    'hd'
-    'nv'
-    'scw'
-    'scw';
-}
-
-.Roboto{
-    font-family: "Roboto", sans-serif;
-    font-size: 5vh;
-    text-align: center;
-}
-
 
 
 header{
@@ -90,11 +74,53 @@ nav{
     position: sticky;
     top: 0;
     overflow: hidden;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
+article {
+    width: 40em;
+    object-fit: cover;
+    margin-top: 2em;
+}
 
+article img{
+    width: 100%;
+    border-radius: 1em;
+    
+}
 
-.wrapper{
+footer{
+    grid-area: ft;
+    background-color: var(--main-color);
+    bottom: 0;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+    
+
+}
+
+/*Digital Innova logo*/
+header object{
+    width: 3em;
+    padding: 0.1em;
+    margin-left: -0.25em;
+}
+
+/*layout for landing page*/
+div#layout-index{
+    display: grid;
+    height: 100em;
+    grid-template-rows: 5em 3em 30em 100em 20em;
+    grid-template-areas: 
+    'hd'
+    'nv'
+    'dv'
+    'wr'
+    'ft';
+}
+
+#wrapper{
     display: flex;
     height: 100%;
     grid-area: wr;
@@ -105,26 +131,43 @@ nav{
     gap: 0%;
     padding: 0%;
 }
-section#mainWrapper{
+/*shop and read more button*/
+.button-wrapper{
     display: flex;
-    background-color: #01101b;
-    flex-direction: column;
-    grid-area: scw;
-    flex-wrap: wrap;
-
+    justify-content: space-evenly;
 }
-footer{
-    grid-area: ft;
-    background-color: #3498db;
-    bottom: 0;
-
+button:hover{
+    scale: 104%;
 }
 
+button{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 1em;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
 .margin{
     margin-top: 50vh;
-    margin-bottom: 100vh;
 }
+
+/*layout for main page*/
+div#layout{
+    display: grid;    
+    height: 200vh;
+    grid-template-rows: 5em 3em;
+    grid-template-areas: 
+    'hd'
+    'nv'
+    'scw'
+    'scw';
+}
+
 
 div#img{
     grid-area: dv;
@@ -137,51 +180,13 @@ div#img img{
     
 }
 
-article {
-    width: 40em;
-    object-fit: cover;
-    margin-top: 2em;
+section#mainWrapper{
+    display: flex;
+    background-color: #01101b;
+    flex-direction: column;
+    grid-area: scw;
+    flex-wrap: wrap;
 }
-
-.article{
-    background-color: #3498db;
-    border-radius: 1em;
-    margin-bottom: 1em;
-} 
-
-article img{
-    width: 100%;
-    border-radius: 1em;
-    
-}
-
-button:hover{
-    scale: 104%;
-}
-
-button{
-    background-color: #3498db;
-    border: none;
-    border-radius: 1em;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-
-
-
-a:link, a:visited {
-  color: #3498db;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-
-}
-
 
 .ring{
     display: block;
@@ -191,18 +196,101 @@ a:link, a:visited {
     
 }
 
-.hidden {
-
-    opacity: 0;
+/*layout for shop page*/
+div#layout-buy{
+    display: grid;    
+    height: 100em;
+    grid-template-rows: 5em 3em 80em 1fr;
+    grid-template-areas: 
+    'hd'
+    'nv'
+    'wr'
+    'ft';
+}
+section#sectionShopWrapper{
     
-    transform: translateY(0);
-    filter: blur(5px);
-    transition: all 1s;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 9em 8em 8em;
+    grid-template-areas: 
+    'h1 h1'
+    'ai apn'
+    'ai ap'
 
 }
 
-.show {
-    filter: blur(0);
-    opacity: 1;
-    transform: translateY(-100%);
+section div{
+    color: orange;
+    grid-area: h1;
+    text-align: center;
+    font-family: roboto;
+    font-weight: bold;
 }
+
+section div h1{
+    
+    font-size: 5em;
+    
+    
+}
+section div p{
+    font-size: 1.5em;
+    margin-top: -2.5em;
+}
+
+article#image{
+    
+    grid-area: ai;
+    border-radius: 1em;
+    width: 85%;
+    padding: 2.5em;
+    margin-bottom: 10em;
+    gap: 2.5em;
+}
+article#buy-alt-1{
+    grid-area: apn;
+    background-color: var(--main-color);
+    border-radius: 1em;
+    height: 100%;
+    margin-top: 5em;
+}
+
+#buy-alt-1 h2{
+    text-align: left;
+    padding: 1em;
+    font-family: roboto;
+    font-size: 2em;
+}
+article#buy-alt-1:hover{
+    scale: 102%;
+}
+
+article#buy-alt-2{
+    grid-area: ap;
+    background-color: var(--main-color);
+    border-radius: 1em;
+    margin-top: 10em;
+    height: 100%;
+}
+#buy-alt-2 h2{
+    text-align: left;
+    padding: 1em;
+    font-family: roboto;
+    font-size: 2em;
+}
+
+article#buy-alt-2:hover{
+    scale: 101%;
+}
+
+
+
+
+.article{
+    background-color: var(--main-color);
+    border-radius: 1em;
+    margin-bottom: 1em;
+} 
+
+
+
