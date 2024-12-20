@@ -17,7 +17,11 @@ a:link, a:visited {
     text-decoration: none;
   }
 
-
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
 .hidden {
 
     opacity: 0;
@@ -34,25 +38,6 @@ a:link, a:visited {
     transform: translateY(-100%);
 }
 
-.main-text{
-    color: white;
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    font-size: 5em;
-}
-
-.paragraph-text{
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    text-align: center;
-    font-size: 3em;
-    text-wrap: wrap;
-    margin: 2.5em;
-    margin-left: 10em;
-    margin-right: 10em;
-    
-}
 
 h4{
     font-family: "Roboto", sans-serif;
@@ -136,6 +121,8 @@ div#layout-index{
     display: flex;
     justify-content: space-evenly;
 }
+
+
 button:hover{
     scale: 104%;
 }
@@ -148,8 +135,23 @@ button{
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    
     font-size: 16px;
+    height: 2em;
+}
+h5{
+    margin-top: -0.5em;
+}
+
+div#img{
+    grid-area: dv;
+    object-fit: cover;
+    overflow: hidden;
+}
+div#img img{
+    height: auto;
+    max-width: 100%;
+    
 }
 
 .margin{
@@ -168,17 +170,30 @@ div#layout{
     'scw';
 }
 
-
-div#img{
-    grid-area: dv;
-    object-fit: cover;
-    overflow: hidden;
+.main-text{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 1em;
 }
-div#img img{
-    height: auto;
-    max-width: 100%;
+
+.paragraph-text{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    text-wrap: wrap;
+    margin: 2.5em;
+    word-wrap: break-word;
+    white-space: pre-line;
+    
     
 }
+
+
+
 
 section#mainWrapper{
     display: flex;
@@ -186,6 +201,7 @@ section#mainWrapper{
     flex-direction: column;
     grid-area: scw;
     flex-wrap: wrap;
+    
 }
 
 .ring{
