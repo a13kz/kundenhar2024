@@ -1,6 +1,6 @@
-
+/*general*/
 :root{
-    --main-color: #3498db
+    --main-color: #3498db;
 }
 
 body{
@@ -11,7 +11,7 @@ body{
 
 
 a:link, a:visited {
-    color: var(--main-color);
+    color: white;
     padding: 15px 25px;
     text-align: center;
     text-decoration: none;
@@ -26,7 +26,7 @@ a:link, a:visited {
 
     opacity: 0;
     
-    transform: translateYX(0);
+    transform: translateY(0);
     filter: blur(5px);
     transition: all 1s;
 
@@ -45,7 +45,7 @@ h4{
 
 
 header{
-    background-color: 	white;
+    background-color: 	#01101b;
     font-size: 400%;
     grid-area: hd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -54,13 +54,14 @@ header{
 nav{
     display: flex;
     grid-area: nv;
-    background-color:white;
+    background-color:#01101b;
     justify-content: space-evenly;
     position: sticky;
     top: 0;
     overflow: hidden;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.05);
 }
+
 
 article {
     width: 40em;
@@ -75,14 +76,16 @@ article img{
     
 }
 
+
 footer{
     grid-area: ft;
     background-color: var(--main-color);
     bottom: 0;
     font-family: "Roboto", sans-serif;
-    color: white;
+    color: black;
     text-align: center;
-    
+    text-indent: 1em;
+    font-size: 18px;
 
 }
 
@@ -125,12 +128,13 @@ div#layout-index{
 
 
 
-button:hover{
-    scale: 104%;
+a:hover{
+    transform: scale(1.025);
 }
 
-button{
-    background-color: var(--main-color);
+.btn{
+    background-color: #01101b;
+    font-family: "Roboto", sans-serif;
     border: none;
     border-radius: 1em;
     color: white;
@@ -139,7 +143,7 @@ button{
     text-decoration: none;
     
     font-size: 16px;
-    height: 2em;
+    height: 0.5em;
 }
 h5{
     margin-top: -0.5em;
@@ -158,6 +162,12 @@ div#img img{
 
 .margin{
     margin-top: 50vh;
+}
+
+.image-text{
+    margin-top: -2rem;
+    text-indent: 1em;
+    font-size: 1.25em;
 }
 
 /*layout for main page*/
@@ -241,34 +251,31 @@ section#sectionShopWrapper{
     gap: 0.75em;
 }
 
-section div{
-    color: black;
+div#title{
+    color: #01101b;
     grid-area: h1;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
 }
+div#title h1{
+    font-size: 5em;
+}
 
 #continue-button{
     display: flex;
     grid-area: bt;
-    margin-top: 1em;
+    
 
 }
 
-article#continue-button button{
+article#continue-button a{
 
-    margin-top: 0.75em;
     margin-left: 32.5em;
+    font-family: "Roboto", sans-serif;
 } 
 
-section div h1{
-    
-    font-size: 5em;
-}
-
-
-article#image{
+div#product-image{
     
     grid-area: ai;
     border-radius: 1em;
@@ -276,6 +283,20 @@ article#image{
     
     margin-left: 1em;
 }
+
+div#product-image{
+    width: 40em;
+    object-fit: cover;
+    margin-top: 2em;
+}
+
+div#product-image img{
+    width: 100%;
+    border-style: solid;
+    border-width: 0.12em;
+    
+}
+
 
 article#purchase h2{
     font-size: 4em;
@@ -287,12 +308,12 @@ article#buy-alt-1{
     background-color: white;
     border-style: solid;
     border-width: 0.1em;
-    border-color: black;
+    border-color: #01101b;
     align-content: end;
     
     height: 100%;
     
-    color: black;
+    color: #01101b;
 }
 
 #buy-alt-1 h2{
@@ -310,11 +331,12 @@ article#buy-alt-1{
     font-weight: normal;
 }
 article#buy-alt-1:hover{
-    scale: 102%;
+    transform: scale(1.025);;
 }
 
 article#buy-alt-1:focus{
-    border-color: blue;
+    border-color: var(--main-color);
+    border-width: 0.15em;
 }
 
 article#buy-alt-2{
@@ -323,11 +345,11 @@ article#buy-alt-2{
     background-color: white;
     border-style: solid;
     border-width: 0.1em;
-    border-color: black;
+    border-color: #01101b;
     align-content: end;
     height: 100%;
     
-    color: black;
+    color: #01101b;
 }
 #buy-alt-2 h2{
     text-align: left;
@@ -344,20 +366,14 @@ article#buy-alt-2{
 }
 
 article#buy-alt-2:hover{
-    scale: 101%;
+    transform: scale(1.025);
 }
 
 article#buy-alt-2:focus{
-    border-color: blue;
+    border-color: var(--main-color);
+    border-width: 0.15em;
 }
 
-
-
-.article{
-    background-color: var(--main-color);
-    border-radius: 1em;
-    margin-bottom: 1em;
-} 
 
 
 
