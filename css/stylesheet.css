@@ -220,7 +220,7 @@ section#mainWrapper{
 div#layout-buy{
     display: grid;    
     height: 100em;
-    grid-template-rows: 5em 3em 60em 1fr;
+    grid-template-rows: 5em 3em 80em 20em;
     grid-template-areas: 
     'hd'
     'nv'
