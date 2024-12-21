@@ -120,7 +120,7 @@ div#layout-index{
     gap: 0%;
     padding: 0%;
 }
-/*shop and read more button*/
+
 .button-wrapper{
     display: flex;
     justify-content: space-evenly;
@@ -170,7 +170,7 @@ div#img img{
     font-size: 1.25em;
 }
 
-/*layout for main page*/
+/*layout for info page*/
 div#layout{
     display: grid;    
     height: 200vh;
